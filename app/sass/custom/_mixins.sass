@@ -1,0 +1,107 @@
+@import "variables"
+
+@mixin borderRadius($radius) 
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    border-radius: $radius
+
+@mixin borderRadiusCombination($top-left, $top-right, $bottom-right, $bottom-left) 
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -ms-border-radius: $top-left $top-right $bottom-right $bottom-left
+    border-radius: $top-left $top-right $bottom-right $bottom-left
+
+@mixin transition($transition-property, $transition-time, $method) 
+    -webkit-transition: $transition-property $transition-time $method
+    -moz-transition: $transition-property $transition-time $method
+    -ms-transition: $transition-property $transition-time $method
+    -o-transition: $transition-property $transition-time $method
+    transition: $transition-property $transition-time $method
+
+@mixin transform($transforms)
+    -moz-transform: $transforms
+    -o-transform: $transforms
+    -ms-transform: $transforms
+    -webkit-transform: $transforms
+    transform: $transforms
+
+@mixin bg-gradient-t2b($start-colour, $end-colour)
+    background-color: $start-colour
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour))
+    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour)
+    background-image:    -moz-linear-gradient(top, $start-colour, $end-colour)
+    background-image:     -ms-linear-gradient(top, $start-colour, $end-colour)
+    background-image:      -o-linear-gradient(top, $start-colour, $end-colour)
+    background-image:         linear-gradient(top, $start-colour, $end-colour)
+    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}')
+
+@mixin textShadow($top, $left, $right, $blur, $color, $inset: false) 
+    @if $inset 
+        -webkit-text-shadow: inset $top $left $right $blur $color
+        -moz-text-shadow: inset $top $left $right $blur $color
+        text-shadow: inset $top $left $right $blur $color
+    @else 
+        -webkit-text-shadow: $top $left $right $blur $color
+        -moz-text-shadow: $top $left $right $blur $color
+        text-shadow: $top $left $right $blur $color
+
+
+@mixin boxShadow($top, $left, $right, $blur, $color, $inset: false) 
+    @if $inset 
+        -webkit-box-shadow: inset $top $left $right $blur $color
+        -moz-box-shadow: inset $top $left $right $blur $color
+        box-shadow: inset $top $left $right $blur $color
+    @else 
+        -webkit-box-shadow: $top $left $right $blur $color
+        -moz-box-shadow: $top $left $right $blur $color
+        box-shadow: $top $left $right $blur $color
+  
+
+@mixin translate($rotateX, $rotateY)
+    -ms-transform: translate($rotateX,$rotateY)
+    -webkit-transform: translate($rotateX,$rotateY)
+    transform: translate($rotateX,$rotateY) 
+
+
+@mixin scale($scale) 
+    transform: scale($scale)
+    -moz-transform: scale($scale)
+    -webkit-transform: scale($scale)
+
+@mixin grayscale($scale)
+    filter: grayscale($scale)
+    -webkit-filter: grayscale($scale)
+    -moz-filter: grayscale($scale)
+    -o-filter: grayscale($scale)
+
+@mixin brightness($scale)
+    filter: brightness($scale)
+    -webkit-filter: brightness($scale)
+    -moz-filter: brightness($scale)
+    -o-filter: brightness($scale)
+    
+@mixin rotate($rotate) 
+    transform: rotate($rotate)
+    -o-transform: rotate($rotate)
+    -moz-transform: rotate($rotate)
+    -webkit-transform: rotate($rotate)
+
+@mixin backgroundSize($cover) 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    background-position: top center
+
+//Font styling font-family, font-size and color of the font 
+@mixin fontStyle($fontFamily, $fontSize, $fontColor) 
+    font-family: $fontFamily
+    font-size: $fontSize
+    color: $fontColor
+
+@mixin blur($scale)
+    filter: blur($scale)
+    -webkit-filter: blur($scale)
+    -moz-filter: blur($scale)
+    -o-filter: blur($scale)

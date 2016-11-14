@@ -1,0 +1,106 @@
+/* ----------------------------------------------------------------------- */
+/* 0. HEADER */
+/* ----------------------------------------------------------------------- */
+
+.loading 
+	z-index: 100
+	// background-color: rgba(255,255,255,1)
+	background: linear-gradient(245deg, #98cff0 10%, #fff)
+	background: -moz-linear-gradient(245deg, #98cff0 10%, #fff)
+	background: -webkit-linear-gradient(245deg, #98cff0 10%, #fff)
+	background: -o-linear-gradient(245deg, #98cff0 10%, #fff)
+	background-size: 200% 200%
+	opacity: 0.96
+	//
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	display: table 
+	.cell-load 
+		display: table-cell
+		vertical-align: middle
+		font-family: $f-semibold
+		font-size: 1.2em
+		color: #333
+		h3 
+			margin: 1em 0
+			img 
+				height: 90px
+				width: auto
+	.load
+		width: 3em
+		height: 3em
+		text-align: center
+		position: absolute 
+		left: 50%
+		margin: -1.5em
+		-webkit-animation: circle infinite .65s linear
+		-moz-animation: circle infinite .65s linear
+		-o-animation: circle infinite .65s linear
+		animation: circle infinite .65s linear
+		border: 3px solid #333
+		border-top-color: transparent
+		border-radius: 100%
+
+#close-menu 
+	display: inline-block
+	width: 100%
+	height: 100%
+	position: relative
+	z-index: 2
+	@media (min-width: 768px)
+		&:before 
+			content: ''
+			position: absolute
+			top: 45%
+			width: 100%
+			text-align: center
+
+.navbar-primary
+	z-index: 2
+	position: fixed 
+	width: 100%
+	background-color: $green
+	border-bottom: 2px solid $green-burned
+	.lg 
+		float: left
+		&:before
+			content: '' 
+			position: absolute 
+			width: 50vw
+			height: 82px
+			left: -50vw
+			z-index: 1
+			background-color: $green-burned
+		a 
+			display: block
+	.nav-menu
+		float: right
+		li
+			display: inline-block 
+			vertical-align: middle
+		a 
+			position: relative
+			display: block 
+			height: 82px
+			line-height: 82px
+			padding: 0 3vw
+			font-family: $f-light
+			font-size: 1em
+			color: $green-dark
+			text-transform: uppercase
+			@include transition(all, 0.2s, ease-in-out)
+			&:hover, &.active
+				background-color: rgba(#fff, 0.4)
+				&:after 
+					content: ''
+					display: block
+					position: absolute 
+					left: 0
+					bottom: -2px
+					width: 99%
+					height: 0
+					border: 1px solid $green-dark
+

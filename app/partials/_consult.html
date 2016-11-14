@@ -1,0 +1,93 @@
+<section class="consult" id="marcar-consulta">
+	<dic class="container row">
+		<div class="row row-title">
+    		<div class="col col-title text-center">
+    			<i class="fa fa-calendar-check-o"></i>
+                <h1>Fale conosco ou <br>
+	    		Marque sua consulta</h1>
+    			<!-- <span><em>ou nos envia uma mensagem</em></span> -->
+	    	</div>
+	    	<div class="col col-call hidden-sm hidden-xs">
+    		    <span><i class="fa fa-phone"></i> (61) 3328-3904</span>
+    		    <span><i class="fa fa-whatsapp"></i> (61) 99868-3904</span>
+	    	</div>
+            <div class="col col-call hidden-md hidden-lg">
+                <span><i class="fa fa-phone"></i> (061) 3328-3904</span>
+                <span><i class="fa fa-whatsapp"></i> (061) 99868-3904</span>
+            </div>
+	    </div>
+		<form action="#this" class="form-contato" id="form-contato">
+			<div class="col">
+    			<div class="select-field">
+    				<i class="fa fa-caret-down"></i>
+    				<label class="label" for="field-assunto">Assunto *</label>
+    				<select name="assunto" id="field-assunto">
+    					<option value="Marcar Consulta">Marcar consulta</option>
+    					<option value="Administração">Administração</option>
+    					<option value="Recepção">Recepção</option>
+    					<option value="Outros">Outros</option>
+    				</select>
+    			</div>
+    			<div class="input-field">
+    				<label class="label" for="field-nome">Nome *</label>
+    				<input type="text" id="field-nome">
+    			</div>
+    			<div class="row">
+    				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-mail">
+    					<div class="col-lg-9 input-field">
+    						<label class="label" for="field-email">e-mail</label>
+    						<input type="email" id="field-email">
+    					</div>
+                        
+    				</div>
+    				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-tel">
+    					<div class="input-field">
+    						<label class="label" for="field-telefone">Telefone</label>
+    						<input type="text" id="field-telefone">
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col">
+    			<div class="row">
+    				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-mail">
+    					<div class="col-lg-9 input-field">
+                            <span class="hidden-xs hidden-sm">
+        						<label class="label" for="field-data">Data</label>
+        						<input type="text" id="field-data">
+                            </span>
+                            <span class="hidden-md hidden-lg">
+                                <label class="label" for="field-data">Data</label>
+                                <input type="date" id="field-data">
+                            </span>
+    					</div>
+    				</div>
+    				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-tel">
+    					<div class="input-field">
+                            <span class="hidden-xs hidden-sm">
+        						<label class="label" for="field-horario">Horário</label>
+        						<input type="text" id="field-horario">
+                            </span>
+                            <span class="hidden-md hidden-lg">
+                                <label class="label" for="field-horario">Horário</label>
+                                <input type="time" min="09:00" max="17:30" id="field-horario">
+                            </span>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="textarea-field">
+    				<label class="label" for="field-mensagem">Mensagem *</label>
+    				<textarea name="" id="field-mensagem"></textarea>
+    			</div>
+    			<div class="input-field">
+    				<div class="col-text">
+    					<em class="warning">* Campos obrigatórios</em>
+    				</div>
+    				<div class="col-submit">
+    					<input type="submit" name="" value="Enviar" id="submit" class="submit disabled" disabled>
+    				</div>
+    			</div>
+    		</div>
+		</form>
+	</div>
+</section>
