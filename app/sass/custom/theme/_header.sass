@@ -44,63 +44,49 @@
 		border-top-color: transparent
 		border-radius: 100%
 
-#close-menu 
-	display: inline-block
-	width: 100%
-	height: 100%
+.navbar-primary
+	z-index: 1
 	position: relative
-	z-index: 2
-	@media (min-width: 768px)
+	padding: 1em 0
+	background-color: #fff
+	border-bottom: 1px solid #b0ada4
+	box-shadow: 0 0 6px #666
+	.btn 
+		display: inline-block
+		cursor: pointer
+		border: 0
+	.btn.-back
+		text-align: left
+		left: 0
+		border: 1px solid #999
+		border-radius: 50%
+		padding: 1.6em
+		background-color: #fff
+		background: image-url('ico-arrow-left.png') no-repeat center center 
+	.lg 
+		position: absolute 
+		left: 50%
+		top: 0
+		margin-left: -83.5px
+	.btn.-down
+		position: absolute
+		border-radius: 20px
+		right: 0
+		text-transform: uppercase
+		font-size: 0.9em
+		font-weight: 700
+		color: $yellow-font
+		padding: 1em 2.6em 1.1em 4.4em
 		&:before 
 			content: ''
 			position: absolute
-			top: 45%
-			width: 100%
-			text-align: center
-
-.navbar-primary
-	z-index: 2
-	position: fixed 
-	width: 100%
-	background-color: $green
-	border-bottom: 2px solid $green-burned
-	.lg 
-		float: left
-		&:before
-			content: '' 
-			position: absolute 
-			width: 50vw
-			height: 82px
-			left: -50vw
-			z-index: 1
-			background-color: $green-burned
-		a 
-			display: block
-	.nav-menu
-		float: right
-		li
-			display: inline-block 
-			vertical-align: middle
-		a 
-			position: relative
-			display: block 
-			height: 82px
-			line-height: 82px
-			padding: 0 3vw
-			font-family: $f-light
-			font-size: 1em
-			color: $green-dark
-			text-transform: uppercase
-			@include transition(all, 0.2s, ease-in-out)
-			&:hover, &.active
-				background-color: rgba(#fff, 0.4)
-				&:after 
-					content: ''
-					display: block
-					position: absolute 
-					left: 0
-					bottom: -2px
-					width: 99%
-					height: 0
-					border: 1px solid $green-dark
-
+			margin-left: -2.2em
+			margin-top: -0.3em
+			width: 17px
+			height: 21px
+			background: image-url('ico-download.png') no-repeat center center
+		&.-y
+			background: linear-gradient(to right, $yellow, $yellow-burned)
+			background: -moz-linear-gradient(to right, $yellow, $yellow-burned)
+			background: -webkit-linear-gradient(to right, $yellow, $yellow-burned)
+			background: -o-linear-gradient(to right, $yellow, $yellow-burned)

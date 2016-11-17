@@ -1,26 +1,6 @@
 /* ----------------------------------------------------------------------- */
 /* 0. GENERALS */
 /* ----------------------------------------------------------------------- */
-   
-body, html 
-    background-color: $green
-    font-family: $f-regular
-    font-size: 14px
-    font-weight: 100
-    margin: 0
-    padding: 0
-    width: 100%
-    overflow-x: hidden
-    @media (min-width: 770px) and (max-width: 1440px)
-        font-size: 16px
-    @media (min-width: 1441px) and (min-width: 1600px)
-        font-size: 17px
-    @media (min-width: 1800px) and (max-width: 1999px)
-        font-size: 20px
-    @media (min-width: 2000px) and (max-width: 2399px)
-        font-size: 21px
-    @media (min-width: 2400px)
-        font-size: 28px
 
 *
     -webkit-box-sizing: border-box
@@ -29,32 +9,61 @@ body, html
     -o-box-sizing: border-box
     box-sizing: border-box
     &::-moz-selection
-        background-color: rgba($green-dark,0.5)
+        background-color: rgba($blue-font,0.5)
         color: #fff
     &::selection 
-        background-color: rgba($green-dark,0.5)
+        background-color: rgba($blue-font,0.5)
         color: #fff
+   
+body, html 
+    background-color: #f1f2f3
+    font-family: $f-regular
+    font-size: 12px
+    font-weight: 100
+    margin: 0
+    padding: 0
+    width: 100%
+    @media (min-width: 769px)
+        font-size: 14px
+    // @media (min-width: 1441px) and (min-width: 1600px)
+    //     font-size: 17px
+    // @media (min-width: 1800px) and (max-width: 1999px)
+    //     font-size: 20px
+    // @media (min-width: 2000px) and (max-width: 2399px)
+    //     font-size: 21px
+    // @media (min-width: 2400px)
+    //     font-size: 28px
 
 img
-    &.cover
-        object-fit: cover
     max-width: 100%
     height: auto
-.img-shadow 
-    box-shadow: 0 1.2em 3em #ccc
 
-.margin-auto
-    float: none !important
+button 
+    border: 0
+    cursor: pointer
+
+
+/* ----------------------------------------------------------------------- */
+/* 1. TITLES */
+/* ----------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------- */
+/* 2. SITE CONTENT */
+/* ----------------------------------------------------------------------- */
+
+.container 
+    width: 96%
+    max-width: 1366px
+    height: 100%
+    position: relative
     margin: 0 auto
+    @media (min-width: 1200px)
+        width: 94% 
+    @media (min-width: 1441px)
+        max-width: 80%
 
 .hide 
     display: none
-
-.centered 
-    position: absolute
-    top: 50%
-    left: 50%
-    // @include translate(-50%, -50%)
 .uppercase 
     text-transform: uppercase
 .text-center 
@@ -62,7 +71,7 @@ img
 .text-right 
     text-align: right
 .text-left 
-    text-align: left!important
+    text-align: left
 .bold 
     font-family: $f-semibold
 .no-padding 
@@ -74,7 +83,14 @@ img
 .table-row
     display: table-row
 
-.cl,
+.cl
+    &:after
+        content: ""
+        visibility: hidden
+        display: block
+        height: 0
+        width: 0
+        clear: both
 .row
     &:after
         content: ""
@@ -85,57 +101,40 @@ img
         clear: both
     div[class^=col]
         float: left
-// .row-table
-//     display: table
-//     width: 100%
-//     &:after
-//         content: ""
-//         visibility: hidden
-//         display: block
-//         height: 0
-//         width: 0
-//         clear: both
-//     div[class^=col]
-//         display: table-cell
-//         vertical-align: middle
 
-.col-social
-    a
-        color: #666
-    a.fa-instagram
-        &:hover
-            color: $instagram
-    a.fa-facebook
-        &:hover
-            color: $facebook
-    a.fa-youtube-play
-        &:hover
-            color: $youtube
-    a.fa-google-plus-official
-        &:hover
-            color: #dd4b39
+@media (min-width: 769px)
+    .row-table
+        display: table
+        width: 100%
+        &:after
+            content: ""
+            visibility: hidden
+            display: block
+            height: 0
+            width: 0
+            clear: both
+        div[class^=col]
+            display: table-cell
+            vertical-align: middle
+
+// .col-social
+//     a
+//         color: #666
+//     a.fa-instagram
+//         &:hover
+//             color: $instagram
+//     a.fa-facebook
+//         &:hover
+//             color: $facebook
+//     a.fa-youtube-play
+//         &:hover
+//             color: $youtube
+//     a.fa-google-plus-official
+//         &:hover
+//             color: #dd4b39
 
 .no-scrolling
     overflow: hidden
-
-/* ----------------------------------------------------------------------- */
-/* 1. TITLES */
-/* ----------------------------------------------------------------------- */
-
-/* ----------------------------------------------------------------------- */
-/* 2. SITE CONTENT */
-/* ----------------------------------------------------------------------- */
-
-.container 
-    width: 90%
-    max-width: 1240px
-    height: 100%
-    position: relative
-    margin: 0 auto
-    @media (min-width: 1200px)
-        width: 94% 
-    @media (min-width: 1441px)
-        max-width: 80%
 
 
 /* ----------------------------------------------------------------------- */

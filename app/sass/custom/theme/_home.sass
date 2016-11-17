@@ -7,80 +7,109 @@ section
 	height: 100%
 	position: relative
 
-
-
-.section-banner
-	position: relative
-	width: 100%
-	height: 80vh
-	background: image-url('banner-joelho.jpg') no-repeat center center 
-	background-size: cover
-	-webkit-animation: css-carousel 20s linear infinite
-	-moz-animation: css-carousel 20s linear infinite
-	-ms-animation: css-carousel 20s linear infinite
-	animation: css-carousel 20s linear infinite
-	.call 
+.coverphoto
+	background-color: #f1f2f3
+	height: 70vh
+	overflow: hidden
+	&:after 
+		z-index: 0
+		background: image-url('bg-coverphoto.png') no-repeat center -70px
+		background-size: 100% auto
+		content: ''
+		width: 120%
+		height: 100%
 		position: absolute
-		bottom: 0
-		width: 100%
-		background: linear-gradient(to right, $green-burned 30%, rgba($green-burned, 0))
-		background: -o-linear-gradient(to right, $green-burned 30%, rgba($green-burned, 0))
-		background: -moz-linear-gradient(to right, $green-burned 30%, rgba($green-burned, 0))
-		background: -webkit-linear-gradient(to right, $green-burned 30%, rgba($green-burned, 0))
-		padding: 2em 0
-	.box 
-		display: inline-block
-		float: left
-		width: 80%
-	.title 
-		display: inline-block
-		font-size: 2.6em 
-		color: #fff 
-		border-bottom: 2px solid $green-dark
+		left: -10%
+		bottom: 10px
+		border-radius: 0 0 50% 50%
+		box-shadow: 0px 3px 0px 0px #666
+	h1 
+		z-index: 1
+		position: relative 
+		display: block
+		font-family: $f-light
+		font-size: 2.8em
 		line-height: 1.2em
-		padding-bottom: 0.2em
-	.subtitle 
-		font-size: 1.6em
 		color: #fff
-		line-height: 1.6em
-	.btn
-		display: inline-block
-		float: right
-		width: 20%
-		a
-			display: inline-block
-			text-align: center
-			background-color: $green-dark
-			font-size: 0.8em
-			color: #fff
-			padding: 1.2em 3em
+		text-align: center
+		padding-top: 118px
+		span 
+			font-family: $f-semibold
+			display: block
+
+.slider
+	margin-top: 66px
+	.container > .btn
+		position: absolute
+		top: 50%
+		margin-top: -45px
+		width: 90px
+		height: 90px
+		background-color: $blue-light
+		box-shadow: 0 10px 30px rgba($blue-light, 0.3)
+		border-radius: 50%
+		&.-inactive 
+			border: 1px solid #e0e1e2
+			background-color: transparent 
+			box-shadow: 0 0 0
+	.btn.-previus 
+		left: 0
+		background: image-url('ico-arrow-previus.png') no-repeat center center
+	.btn.-next
+		right: 0
+		background: $blue-light image-url('ico-arrow-next.png') no-repeat center center
+	.item 
+		position: relative
+		width: 840px
+		margin: 0 auto
+		padding: 55px
+		background-color: #fff
+		border-radius: 40px
+		border: 1px solid #ddd
+		box-shadow: 0 10px 80px #ccc
+	.-biometria 
+		text-align: center
+		h3 
+			font-family: $f-semibold
+			font-size: 2.2em
+			color: $blue
+			letter-spacing: 2px
 			text-transform: uppercase
-			border-radius: 2px
-
-
-.section-call 
-	padding: 6em 0
-	li 
+			margin-bottom: 1.6em
+			&:after 
+				content: ''
+				width: calc(100% - 110px)
+				border-bottom: 2px solid #dcdcdd
+				position: absolute
+				left: 55px
+				right: 55px
+				margin-top: 1.8em
+		p 
+			font-size: 1.6em
+			line-height: 1.4em
+			color: #626264
+			padding: 0 1em
+		.pic
+			width: 160px
+			height: 160px
+			margin: 0 auto 1.4em
+			border-radius: 40px
+			padding-bottom: 2.1em
+			border: 2px solid $blue
+	.btn.-more
 		display: inline-block
-		vertical-align: top
-		width: 24%
-	h3 
-		font-size: 1.6em
-		color: #000
+		border-radius: 40px
 		text-transform: uppercase
-		padding-left: 0.6em
-		border-left: 2px solid $green-dark
-		margin-bottom: 0.6em
-	p 
-		font-size: 1.2em
-		color: #666
-		line-height: 1.4em
+		font-size: 1.4em
+		font-weight: 700
+		color: #fff
+		padding: 1.1em 4.4em
+		margin-top: 1.6em
+		letter-spacing: 2px
+		&.-b-g
+			background: linear-gradient(to right, $blue-light, $green-light)
+			background: -moz-linear-gradient(to right, $blue-light, $green-light)
+			background: -webkit-linear-gradient(to right, $blue-light, $green-light)
+			background: -o-linear-gradient(to right, $blue-light, $green-light)
 
 
-.section-about
-	
-
-.s-title
-	display: block
-	text-align: center
-	border-bottom: 2px solid $green-dark
