@@ -3,14 +3,13 @@
 /* ----------------------------------------------------------------------- */
 
 .loading 
-	z-index: 100
-	// background-color: rgba(255,255,255,1)
-	background: linear-gradient(245deg, #98cff0 10%, #fff)
-	background: -moz-linear-gradient(245deg, #98cff0 10%, #fff)
-	background: -webkit-linear-gradient(245deg, #98cff0 10%, #fff)
-	background: -o-linear-gradient(245deg, #98cff0 10%, #fff)
+	z-index: 8
+	background: linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+	background: -moz-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+	background: -webkit-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+	background: -o-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
 	background-size: 200% 200%
-	opacity: 0.96
+	opacity: 0.97
 	//
 	position: fixed
 	top: 0
@@ -18,6 +17,9 @@
 	width: 100%
 	height: 100%
 	display: table 
+	&.-inactive 
+		z-index: -1
+		opacity: 0
 	.cell-load 
 		display: table-cell
 		vertical-align: middle
@@ -40,7 +42,7 @@
 		-moz-animation: circle infinite .65s linear
 		-o-animation: circle infinite .65s linear
 		animation: circle infinite .65s linear
-		border: 3px solid #333
+		border: 3px solid #fff
 		border-top-color: transparent
 		border-radius: 100%
 
@@ -76,12 +78,12 @@
 		font-size: 0.9em
 		font-weight: 700
 		color: $yellow-font
-		padding: 1em 2.6em 1.1em 4.4em
+		padding: 1.8em
 		&:before 
 			content: ''
 			position: absolute
-			margin-left: -2.2em
-			margin-top: -0.3em
+			margin-left: -8px
+			margin-top: -10.5px
 			width: 17px
 			height: 21px
 			background: image-url('ico-download.png') no-repeat center center
@@ -90,3 +92,25 @@
 			background: -moz-linear-gradient(to right, $yellow, $yellow-burned)
 			background: -webkit-linear-gradient(to right, $yellow, $yellow-burned)
 			background: -o-linear-gradient(to right, $yellow, $yellow-burned)
+		span 
+			display: none
+	@media (min-width: 769px)
+		.btn.-down
+			position: absolute
+			border-radius: 20px
+			right: 0
+			text-transform: uppercase
+			font-size: 0.9em
+			font-weight: 700
+			color: $yellow-font
+			padding: 1em 2.6em 1.1em 4.4em
+			&:before 
+				content: ''
+				position: absolute
+				margin-left: -2.2em
+				margin-top: -0.3em
+				width: 17px
+				height: 21px
+				background: image-url('ico-download.png') no-repeat center center
+			span 
+				display: inline-block

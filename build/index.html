@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-    <!-- <div id="loading" class="loading"><div class="cell-load text-center"><div class="load">&nbsp;</div></div></div> -->
+    <div id="loading" class="loading"><div class="cell-load text-center"><div class="load"></div></div></div>
 
 <header class="header">
     <nav class="navbar-primary cl">
@@ -21,21 +21,19 @@
             <div class="lg">
                 <a href="#this" title="Banco Neon"><img src="../images/lg-neon.png" height="36" width="167" alt="Banco Neon"></a>
             </div>
-            <button type="button" class="btn -down -y">Baixe o app</button>
+            <button type="button" class="btn -down -y"><span>Baixe o app</span></button>
         </div>
     </nav>
 </header>
     <section class="coverphoto">
-        <h1>Tipo um banco, <span>só que mais seguro</span></h1>
+        <h1 id="title">Tipo um banco, <span>só que mais seguro</span></h1>
     </section>
     <section class="slider">
     	<div class="container">
 	    	<button type="button" class="btn -previus -inactive"></button>
 	    	<button type="button" class="btn -next"></button>
 	    	<div class="item -biometria">
-	    		<div class="pic">
-	    			asdas
-				</div>	
+	    		<div class="pic"></div>	
 	    		<h3>Biometria</h3>
 	    		<p>Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
 	    		<a href="#this" class="btn -more -b-g">Saiba mais</a>
@@ -44,27 +42,28 @@
     </section>
     	<footer class="footer">
 		<div class="container">
+			<div class="call">
+				<p>Atendimento <span class="phone">0800-606-7688</span></p>
+			</div>
+			<div class="social">
+				<ul>
+					<li><a href="#this" title="Facebook" class="fa fa-facebook"></a></li>
+					<li><a href="#this" title="Facebook" class="fa fa-twitter"></a></li>
+					<li><a href="#this" title="Facebook" class="fa fa-linkedin"></a></li>
+					<li><a href="#this" title="Facebook" class="fa fa-youtube"></a></li>
+					<li><a href="#this" title="Facebook" class="fa fa-instagram"></a></li>
+					</li>
+				</ul>
+			</div>
 			<address>
 				<p>Banco Neon S.A. - CNPJ 00.253.448/0001-17 </p>
 				<p>Av. Raja Gabaglia, 1143/17°andar - CEP: 30380-403</p>
 				<p>Luxemburgo - Belo Horizonte - MG</p>
 			</address>
-			<div class="social">
-				<ul>
-					<li>
-						<a href="#this" title="Facebook" class="">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-				</ul>
-			</div>
 		</div>
 	</footer>
 	<!-- js -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="js/application.js"></script>
 </body>
 </html>	

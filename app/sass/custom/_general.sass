@@ -23,6 +23,7 @@ body, html
     margin: 0
     padding: 0
     width: 100%
+    overflow-x: hidden
     @media (min-width: 769px)
         font-size: 14px
     // @media (min-width: 1441px) and (min-width: 1600px)
@@ -41,7 +42,8 @@ img
 button 
     border: 0
     cursor: pointer
-
+    &:focus:active
+        outline: 0
 
 /* ----------------------------------------------------------------------- */
 /* 1. TITLES */
