@@ -26,18 +26,31 @@
     </nav>
 </header>
     <section class="coverphoto">
-        <h1 id="title">Tipo um banco, <span>só que mais seguro</span></h1>
+        <h1 class="tit">Tipo um banco,</h1>
+        <h1 class="tit -b">só que mais seguro</h1>
     </section>
     <section class="slider">
-    	<div class="container">
-	    	<button type="button" class="btn -previus -inactive"></button>
-	    	<button type="button" class="btn -next"></button>
-	    	<div class="item -biometria">
-	    		<div class="pic"></div>	
-	    		<h3>Biometria</h3>
-	    		<p>Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
-	    		<a href="#this" class="btn -more -b-g">Saiba mais</a>
+    	<div class="container" id="carousel">
+	    	<div class="item -biometria carousel">
+	    		<div class="pic -inactive" id="pic"></div>
+	    		<h3 id="tit_item" class="-inactive">Biometria</h3>
+	    		<p id="text" class="-inactive">Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
+	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
 	    	</div>
+	    	<div class="item -biometria carousel">
+	    		<div class="pic -inactive" id="pic"></div>
+	    		<h3 id="tit_item" class="-inactive">Biometria</h3>
+	    		<p id="text" class="-inactive">Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
+	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
+	    	</div>
+	    	<div class="item -biometria carousel">
+	    		<div class="pic -inactive" id="pic"></div>
+	    		<h3 id="tit_item" class="-inactive">Biometria</h3>
+	    		<p id="text" class="-inactive">Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
+	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
+	    	</div>
+	    	<button type="button" class="btn -prev" onclick="carousel.prev()"></button>
+	    	<button type="button" class="btn -next" onclick="carousel.next('fade')"></button>
 	    </div>
     </section>
     	<footer class="footer">
@@ -63,7 +76,19 @@
 		</div>
 	</footer>
 	<!-- js -->
-	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/carousel.js"></script>
 	<script src="js/application.js"></script>
+	<script>
+
+		var carousel = new Carousel('carousel')
+			// btns = new Carousel('btns')
+
+		function carouselNext()
+		{
+			carousel.next()
+		}
+
+	</script>
 </body>
 </html>	

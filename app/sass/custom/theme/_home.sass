@@ -11,6 +11,7 @@ section
 	background-color: #f1f2f3
 	height: 70vh
 	overflow: hidden
+	padding-top: 110px
 	&:after 
 		z-index: 0
 		background: image-url('bg-coverphoto.png') no-repeat center center
@@ -32,8 +33,7 @@ section
 		line-height: 1.2em
 		color: #fff
 		text-align: center
-		padding-top: 118px
-		span 
+		&.-b
 			font-family: $f-semibold
 			display: block
 	@media (min-width: 768px) and (max-width: 992px)
@@ -46,35 +46,43 @@ section
 		&:after 
 			width: 140%
 			left: -20%
+			box-shadow: inset 0 0 10px #333
 	@media (min-width: 1201px)
 		&:after
 			width: 120%
 			left: -10%
+			box-shadow: inset 0 0 10px #333
 
 .slider
 	margin-top: 10%
-	// margin-top: 66px
 	.container > .btn
 		position: absolute
 		top: 50%
 		margin-top: -45px
 		width: 10vw
 		height: 10vw
-		background-color: $blue-light
 		box-shadow: 0 10px 30px rgba($blue-light, 0.3)
 		border-radius: 50%
+		@include transition(all, 0.2s, ease-in-out)
+		&:hover 
+			box-shadow: 0 15px 60px rgba($blue-light, 0.6)
+			@include scale(1.1)
 		&.-inactive 
 			border: 1px solid #e0e1e2
 			background-color: transparent 
 			box-shadow: 0 0 0
-	.btn.-previus 
+	.btn.-prev
 		left: 0
-		background: image-url('ico-arrow-previus.png') no-repeat center center
-		background-size: 26% auto
+		background: $blue-light image-url('ico-arrow-previus.png') repeat-x center center
+		background-size: cover
+		// &:hover 
+		// 	background-position: -70px center 
 	.btn.-next
 		right: 0
-		background: $blue-light image-url('ico-arrow-next.png') no-repeat center center
-		background-size: 26% auto
+		background: $blue-light image-url('ico-arrow-next.png') repeat-x center center
+		background-size: cover
+		// &:hover 
+		// 	background-position: 70px center 
 	.item 
 		position: relative
 		max-width: 840px
@@ -85,8 +93,6 @@ section
 		border-radius: 40px
 		border: 1px solid #ddd
 		box-shadow: 0 10px 80px #ccc
-	.-biometria 
-		text-align: center
 		h3 
 			font-family: $f-semibold
 			font-size: 1.6em
@@ -94,6 +100,9 @@ section
 			letter-spacing: 2px
 			text-transform: uppercase
 			margin-bottom: 1.6em
+			@include transition(all, 2s, ease)
+			&.-inactive 
+				opacity: 0
 			&:after 
 				content: ''
 				width: 90%
@@ -107,6 +116,12 @@ section
 			line-height: 1.4em
 			color: #626264
 			padding: 0 1em
+			&.-inactive 
+				opacity: 0
+		&.-focus
+			box-shadow: 0 10px 40px #ccc
+	.-biometria 
+		text-align: center
 		.pic
 			width: 130px
 			height: 130px
@@ -116,8 +131,12 @@ section
 			border: 2px solid $blue
 			background: image-url('pic-biometria.png') no-repeat center center
 			background-size: 70% auto
+			@include transition(all, 2s, ease)
+			&.-inactive
+				opacity: 0
 	.btn.-more
 		display: inline-block
+		position: relative
 		border-radius: 40px
 		text-transform: uppercase
 		font-size: 1.2em
@@ -126,19 +145,30 @@ section
 		padding: 0.8em 2em
 		margin-top: 1.6em
 		letter-spacing: 2px
+		@include transition(all, 0.2s, ease)
+		-webkit-transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
+		-moz-transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
+		-o-transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
+		transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
 		&.-b-g
 			background: linear-gradient(to right, $blue-light, $green-light)
 			background: -moz-linear-gradient(to right, $blue-light, $green-light)
 			background: -webkit-linear-gradient(to right, $blue-light, $green-light)
 			background: -o-linear-gradient(to right, $blue-light, $green-light)
+		&.-inactive 
+			@include transition(opacity, 4s, ease)
+			opacity: 0
+		&:hover 
+			@include scale(1.08)
+			box-shadow: 0 10px 40px rgba($blue-light, 0.4)
 	@media (min-width: 769px) and (max-width: 1200px)
 		.container > .btn
 			width: 70px
 			height: 70px
-		.btn.-previus
-			background-size: 26% auto
-		.btn.-next
-			background-size: 26% auto
+		// .btn.-previus
+		// 	// background-size: 26% auto
+		// .btn.-next
+		// 	background-size: cover
 		.item 
 			padding: 7%
 	@media (min-width: 1201px)
@@ -146,10 +176,12 @@ section
 		.container > .btn
 			width: 90px
 			height: 90px
-		.btn.-previus
-			background-size: 26% auto
-		.btn.-next
-			background-size: 26% auto
+		// .btn.-previus
+		// 	// background-size: 26% auto
+		// 	background-size: cover
+		// .btn.-next
+		// 	// background-size: 26% auto
+		// 	background-size: cover
 		.item 
 			padding: 5%
 		.-biometria 
