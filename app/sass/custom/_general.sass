@@ -35,6 +35,33 @@ body, html
     // @media (min-width: 2400px)
     //     font-size: 28px
 
+body
+    &:before 
+        // display: none
+        content: ''
+        position: fixed 
+        z-index: -1
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vw
+        background: linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+        background: -moz-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+        background: -webkit-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+        background: -o-linear-gradient(245deg, rgba($blue,1), rgba($green-light, 1))
+        background-size: 200% 200%
+        opacity: 0
+        @include transition(all, 0.15s, ease-in-out)
+body.-overlay 
+    position: relative
+    &:before 
+        display: block
+        z-index: 2
+        opacity: 0.95
+    .btn.-more.-b-g
+        background: #fff
+        color: $blue-light
+
 img
     max-width: 100%
     height: auto

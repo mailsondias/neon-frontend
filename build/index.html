@@ -11,7 +11,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/master.css">
 </head>
-<body>
+<body class="">
     <div id="loading" class="loading"><div class="cell-load text-center"><div class="load"></div></div></div>
 
 <header class="header">
@@ -19,7 +19,7 @@
         <div class="container">
             <button type="button" class="btn -back"></button>
             <div class="lg">
-                <a href="#this" title="Banco Neon"><img src="../images/lg-neon.png" height="36" width="167" alt="Banco Neon"></a>
+                <a href="#this" title="Banco Neon"><img src="images/lg-neon.png" height="36" width="167" alt="Banco Neon"></a>
             </div>
             <button type="button" class="btn -down -y"><span>Baixe o app</span></button>
         </div>
@@ -38,19 +38,13 @@
 	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
 	    	</div>
 	    	<div class="item -biometria carousel">
-	    		<div class="pic -inactive" id="pic"></div>
-	    		<h3 id="tit_item" class="-inactive">Biometria</h3>
-	    		<p id="text" class="-inactive">Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
-	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
+	    		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aperiam iure, illum reprehenderit commodi minus, dolorem, perspiciatis error alias vero architecto expedita cumque aut ipsam eveniet deserunt possimus numquam modi.</h3>
 	    	</div>
 	    	<div class="item -biometria carousel">
-	    		<div class="pic -inactive" id="pic"></div>
-	    		<h3 id="tit_item" class="-inactive">Biometria</h3>
-	    		<p id="text" class="-inactive">Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
-	    		<a href="#this" id="btn-more" class="btn -more -b-g -inactive">Saiba mais</a>
+	    		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aperiam iure, illum reprehenderit commodi minus, dolorem, perspiciatis error alias vero architecto expedita cumque aut ipsam eveniet deserunt possimus numquam modi.</h3>
 	    	</div>
-	    	<button type="button" class="btn -prev" onclick="carousel.prev()"></button>
-	    	<button type="button" class="btn -next" onclick="carousel.next('fade')"></button>
+	    	<button type="button" class="btn -prev" onclick="carousel.prev('slide')"></button>
+	    	<button type="button" class="btn -next" onclick="carousel.next('slide')"></button>
 	    </div>
     </section>
     	<footer class="footer">
@@ -77,18 +71,11 @@
 	</footer>
 	<!-- js -->
 	<script src="js/lib.js"></script>
-	<script src="js/carousel.js"></script>
 	<script src="js/application.js"></script>
 	<script>
 
 		var carousel = new Carousel('carousel')
-			// btns = new Carousel('btns')
-
-		function carouselNext()
-		{
-			carousel.next()
-		}
 
 	</script>
 </body>
-</html>	
+</html>

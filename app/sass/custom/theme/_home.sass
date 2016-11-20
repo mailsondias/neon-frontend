@@ -54,7 +54,8 @@ section
 			box-shadow: inset 0 0 10px #333
 
 .slider
-	margin-top: 10%
+	.container 
+		padding: 2em 0 4em
 	.container > .btn
 		position: absolute
 		top: 50%
@@ -66,7 +67,7 @@ section
 		@include transition(all, 0.2s, ease-in-out)
 		&:hover 
 			box-shadow: 0 15px 60px rgba($blue-light, 0.6)
-			@include scale(1.1)
+			// @include scale(1.1)
 		&.-inactive 
 			border: 1px solid #e0e1e2
 			background-color: transparent 
@@ -116,6 +117,11 @@ section
 			line-height: 1.4em
 			color: #626264
 			padding: 0 1em
+			// &:before 
+			// 	content: '--trigguer'
+			// 	position: absolute 
+			// 	color: red
+			// 	margin-top: -4em
 			&.-inactive 
 				opacity: 0
 		&.-focus
@@ -137,6 +143,7 @@ section
 	.btn.-more
 		display: inline-block
 		position: relative
+		z-index: 3
 		border-radius: 40px
 		text-transform: uppercase
 		font-size: 1.2em
@@ -150,6 +157,15 @@ section
 		-moz-transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
 		-o-transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
 		transition: opacity 4s linear, transform 0.2s ease, box-shadow 0.2s ease
+		// &:before 
+		// 	content: ''
+		// 	position: fixed 
+		// 	z-index: -1
+		// 	top: 0
+		// 	left: 0
+		// 	width: 100vw
+		// 	height: 100vw
+		// 	background-color: rgba($blue-light, 0.7)
 		&.-b-g
 			background: linear-gradient(to right, $blue-light, $green-light)
 			background: -moz-linear-gradient(to right, $blue-light, $green-light)
@@ -161,6 +177,8 @@ section
 		&:hover 
 			@include scale(1.08)
 			box-shadow: 0 10px 40px rgba($blue-light, 0.4)
+			// &:before 
+			// 	z-index: 4
 	@media (min-width: 769px) and (max-width: 1200px)
 		.container > .btn
 			width: 70px
