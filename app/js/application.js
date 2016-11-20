@@ -9,7 +9,8 @@
 		el_tit_1    = document.getElementsByClassName('tit')[0],
 		el_tit_2    = document.getElementsByClassName('tit')[1],
 		_w_height 	= window.innerHeight,
-		el_btn      = document.getElementById('btn-more')
+		el_btn      = document.getElementById('btn-more'),
+		el_header   = document.getElementById('header')
 
 	window.onload = function()
 	{
@@ -55,6 +56,8 @@
 
 		TweenMax.staggerFrom(title_1.chars, 1.5, {opacity: 0, y: -50, ease:Back.easeOut}, 0.05)
 		TweenMax.staggerFrom(title_2.chars, 1.5, {delay: 1.5, opacity: 0, y: 50, ease:Back.easeOut}, 0.05)
+
+		TweenMax.from(el_header, 1.5, {delay: 3.5, opacity: 0, y: -50, ease:Back.easeOut}, 0.05)
 	}
 
 	window.onscroll = function()
